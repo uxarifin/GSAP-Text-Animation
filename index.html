@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GSAP Text Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="text">
+        <h1><span class="hidden-text">THIS IS AN AWESOME</span></h1>
+        <h1><span class="hidden-text">TUTORIAL FOR</span></h1>
+        <h1><span class="hidden-text"><span>GSAP</span> TEXT ANIMATION</span></h1>
+    </div>
+</div>
+<div style="height: 100vh"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
+        integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg=="
+        crossorigin="anonymous"></script>
+<script>
+    tl = new TimelineMax({});
+    tl.staggerFrom('.hidden-text', 1.5, {y:"100%", ease:Power4.easeOut}, 0.15)
+</script>
+</body>
+</html>
